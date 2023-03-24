@@ -1,0 +1,42 @@
+#navbar{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 10vh;
+    width: 100vw;
+    background-color: orange;
+    border-radius: 5px;
+    margin-top: 2px;
+    box-shadow: 2px 2px 2px 2px orangered;
+}
+
+#navbar #options{
+    width: 40vw;
+    display: flex;
+    justify-content: space-around;
+    margin-right: 10px;
+}
+
+#navbar #options a{
+    color: white;
+    text-decoration: none;
+    outline: none;
+    font-size: 1.2rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: border-bottom 0.3s ;
+}
+
+#navbar #options a:hover{
+    border-bottom: 2px solid black;
+}
+
+
+/* @keyframes underline {
+    0%{
+        border-bottom: none;
+    }
+    100%{
+        border-bottom: 2px solid black;
+    }
+} */

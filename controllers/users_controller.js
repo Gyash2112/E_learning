@@ -39,3 +39,28 @@ module.exports.createUser =async function(req,res){
         return res.redirect('/users/sign-in');
 }
 
+module.exports.createSession = async function(req,res){
+    
+    const findUser = await User.findOne({email: req.body.email});
+
+    if(!findUser){
+        console.log("User Not Found");
+        return res.redirect('back');
+    }
+    console.log(findUser);
+
+    if(findUser.password != req.body.password){
+        console.log("Password Incorrect");
+        return res.redirect('back');
+    }
+
+    res.cookie('id', findUser.email);
+    // req.cookies('id', findUser.email);
+    console.log(req.cookies);
+    return res.render('users_profile', {
+        title: 'Profile Page'
+    });
+
+    
+}
+

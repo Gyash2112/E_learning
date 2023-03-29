@@ -58,7 +58,8 @@ module.exports.createSession = async function(req,res){
     // req.cookies('id', findUser.email);
     console.log(req.cookies);
     return res.render('users_profile', {
-        title: 'Profile Page'
+        title: 'Profile Page',
+        user:findUser
     });
 
     

@@ -4,6 +4,8 @@ const app= express();
 const port=8000;
 const expressLayouts= require('express-ejs-layouts');
 const db =require('./config/mongoose');
+const session = require('express-session');
+const mongoStore = require('connect-mongo')(session);
 // const sassMiddleware = require('node-sass-middleware');
 
 
@@ -16,6 +18,21 @@ app.set('layout extractStyles', true);
 
 app.set('view engine', 'ejs');
 app.set('views', './views');
+
+app.use(session({
+    secret:'something',
+    saveUninitialized:false,
+    resave:false,
+    cookie:{
+        maxAge: (24 * 60 * 60 * 1000)
+    },
+    store: new mongoStore({
+        mongooseConnection: db,
+        autoRemove:'disabled',
+    }, function(err){
+        console.log(err || 'connect-mongo set up ok.')
+    })
+}))
 
 
 

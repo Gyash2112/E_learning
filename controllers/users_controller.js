@@ -9,20 +9,27 @@ module.exports.signIn= function(req,res){
     })
 }
 
+module.exports.profile= async function(req,res){
+    const existUser = await User.findById(req.session.user._id);
+    if(!existUser){
+        console.log("User not exist with the given cookie id");
+        return res.redirect('/users/sign-in');
+
+    }
+    return res.render('users_profile', {   
+        title: 'Profile Page',
+        user:existUser
+    }); 
+}
+
+
 
 module.exports.createUser =async function(req,res){
         if(req.body.password != req.body.confirm_password){
             return res.redirect('back');
         }
         delete req.body.confirm_password;
-    //    User.create(req.body, function(err, user){
-    //     if(err){console.log("Error in creating User"); return;}
-
-    //     console.log("User added");
-    //     console.log(user);
-    //     return res.redirect('/users/sign-in');
-
-    //    })
+    
 
     const existUser = await User.findOne({email:req.body.email});
 
@@ -54,14 +61,16 @@ module.exports.createSession = async function(req,res){
         return res.redirect('back');
     }
 
-    res.cookie('id', findUser.email);
-    // req.cookies('id', findUser.email);
-    console.log(req.cookies);
-    return res.render('users_profile', {
-        title: 'Profile Page',
-        user:findUser
-    });
-
+    // res.cookie('id',findUser._id);
+    req.session.user = findUser;
+    return res.redirect('/users/profile');
     
+}
+
+
+module.exports.destroySession= function(req,res){
+    res.clearCookie('id');
+
+    return res.redirect('/users/sign-in');
 }
 

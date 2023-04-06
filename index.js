@@ -26,12 +26,12 @@ app.use(session({
     cookie:{
         maxAge: (24 * 60 * 60 * 1000)
     },
-    store: new mongoStore({
-        mongooseConnection: db,
-        autoRemove:'disabled',
-    }, function(err){
-        console.log(err || 'connect-mongo set up ok.')
-    })
+    // store: new mongoStore({
+    //     mongooseConnection: db,
+    //     autoRemove:'disabled',
+    // }, function(err){
+    //     console.log(err || 'connect-mongo set up ok.')
+    // })
 }))
 
 

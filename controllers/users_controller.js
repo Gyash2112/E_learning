@@ -10,6 +10,7 @@ module.exports.signIn= function(req,res){
 }
 
 module.exports.profile= async function(req,res){
+    // if(check)
     const existUser = await User.findById(req.session.user._id);
     if(!existUser){
         console.log("User not exist with the given cookie id");
@@ -69,7 +70,8 @@ module.exports.createSession = async function(req,res){
 
 
 module.exports.destroySession= function(req,res){
-    res.clearCookie('id');
+    delete req.session.user;
+    // res.set('Cache-Control', 'no-cache, private, no-store, must-revalidate, max-stale=0, post-check=0, pre-check=0');
 
     return res.redirect('/users/sign-in');
 }

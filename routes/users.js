@@ -1,8 +1,9 @@
 const express= require('express');
 const router= express.Router();
 const userController= require('../controllers/users_controller');
-router.get('/sign-in', userController.signIn);
-router.get('/profile', userController.profile);
+const auth = require('../auth/auth');
+router.get('/sign-in',auth.checkAuthentication ,userController.signIn);
+router.get('/profile', auth.isAuthenticated ,userController.profile);
 router.post('/create-User', userController.createUser);
 
 router.post('/create-Session', userController.createSession);

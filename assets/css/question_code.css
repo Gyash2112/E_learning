@@ -1,0 +1,64 @@
+.CodeMirror{
+    font-size: 1rem;
+}
+#question{
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+}
+
+#question #question-desc{
+    min-height: 100vh;
+    width: 40vw;
+    display: flex;
+    flex-direction: column;
+
+}
+
+#question #question-desc #title{
+    display: flex;
+    flex-direction: column;
+}
+#question #question-desc #title h4{
+    font-size: 1.4rem;
+}
+#question #question-desc #title #options{
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    gap: 10px;
+}
+#question #question-desc #title #options p{
+    color: green;
+    font-weight: 800;
+    font-size: 1.0 rem;
+}
+#question #question-desc hr{
+    border: 0.5px solid rgb(186, 184, 184);
+    width: 100%;
+}
+#question #question-desc #description p{
+    text-align: justify;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    /* padding-bottom: 3px; */
+}
+
+
+#question #question-desc #examples .example{
+    background-color: lightgray;
+    padding: 5px;
+}
+#question  #gap{
+    width: 10px;
+    display: block;
+    /* border: 2px solid black; */
+}
+
+#question #code-box{
+    margin-top: 10px;
+    width: 58%;
+    /* position: fixed; */
+    /* display: flex; */
+    /* justify-content: flex-end; */
+}
+

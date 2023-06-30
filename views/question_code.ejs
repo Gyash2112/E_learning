@@ -1,0 +1,77 @@
+<link rel="stylesheet" href="/css/question_code.css">
+<link rel="stylesheet" href="/codemirror-5.65.12/lib/codemirror.css">
+    <script src="/codemirror-5.65.12/lib/codemirror.js"></script>
+    <script src="/codemirror-5.65.12/mode/clike/clike.js"></script>
+    <link rel="stylesheet" href="/codemirror-5.65.12/theme/dracula.css">
+    <link rel="stylesheet" href="/codemirror-5.65.12/addon/fold/foldgutter.css">
+    <script src="/codemirror-5.65.12/addon/edit/closebrackets.js"></script>
+    <script src="/codemirror-5.65.12/mode/python/python.js"></script>
+    <script src="/codemirror-5.65.12/addon/fold/foldcode.js"></script>
+    <script src="/codemirror-5.65.12/addon/fold/indent-fold.js"></script>
+    <script src="/codemirror-5.65.12/addon/fold/brace-fold.js"></script>
+    <script src="/codemirror-5.65.12/addon/fold/foldgutter.js"></script>
+    <script src="/codemirror-5.65.12/addon/fold/comment-fold.js"></script>
+    <script src="/js/question_code.js"></script>
+
+<section id="question">
+    <div id="question-desc">
+        <div id="title">
+            <h4>01. Calculate SUM</h4>
+            <div id="options">
+                <p>Easy</p>
+                <a href="">Add To</a>
+                <a href="">Share</a>
+            </div>
+        </div>
+        <hr>
+        <div id="description">
+            <p>Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.</p>
+            <br>
+            <p>You may assume that each input would have exactly one solution, and you may not use the same element twice.</p>
+            <br>
+            <p>You can return the answer in any order.</p>
+        </div>
+
+
+        <div id="examples">
+            <div class="example">
+                <h4>Example 1:</h4>
+
+                <p><strong>Input:</strong> nums = [2,7,11,15], target = 9</p>
+                <p><strong>Output:</strong> [0,1]</p>
+                <p><strong>Explanation:</strong> Because nums[0] + nums[1] == 9, we return [0, 1].</p>
+            </div>
+            <br>
+        </div>
+
+        <div id="constraints">
+            <ul>
+                <li>2 <= nums.length <= 104</li>
+                <li>-109 <= nums[i] <= 109</li>
+                <li>-109 <= target <= 109</li>
+                <li><b>Only one valid answer exists.</b></li>
+            </ul>
+        </div>
+
+    </div>
+    <!-- ....Question Description Ends Here..... -->
+
+    <div id="gap"></div>
+
+    <div id="code-box">
+        <div class="form">
+            <form action="/runCode" method="post">
+                <textarea name="code" id="editor" cols="10" rows="30" ></textarea>
+    
+        <select name="language" id="language">
+            <option value="java" selected>JAVA</option>
+            <option value="py">PYTHON</option>
+            <option value="c++">C++</option>
+        </select>
+    
+    
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
+</section>

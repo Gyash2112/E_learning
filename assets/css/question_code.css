@@ -1,6 +1,46 @@
 .CodeMirror{
     font-size: 1rem;
 }
+#header{
+    height: 40px;
+    width: 100%;
+    background-color: gray;
+    display: flex;
+    align-items: center;
+  }
+  #header #select_language{
+    height: 100%;
+    width: auto;
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    color: white;
+  }
+  #header #select_language select{
+    height: 80%;
+    border-radius: 5px;
+    background-color: burlywood;
+  }
+  #header #select_language select option{
+    color: white;
+  }
+
+  #other_option{
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    margin-right: 10px;
+  }
+  #other_option input[type=button]{
+    height: 80%;
+    width: 60px;
+    padding: 5px;
+  }
+
+  .form{
+    position: static;
+  }
+
 #question{
     min-height: 100vh;
     width: 100vw;

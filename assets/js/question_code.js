@@ -17,7 +17,7 @@ var editor= CodeMirror.fromTextArea(document.getElementById("editor"),{
 
 
 //   var width = window.innerWidth;
-// editor.setSize("auto" , "100vh");
+editor.setSize("100%" , "80vh");
 var languages = document.getElementById('language');
 editor.getDoc().setValue('class Main{\r\n' +
 '   \r\n' +

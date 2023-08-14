@@ -25,11 +25,11 @@
         </div>
         <hr>
         <div id="description">
-            <p>Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.</p>
+            <p>Given two Integers x and y. Return the sum of the Given Two Numbers</p>
             <br>
             <p>You may assume that each input would have exactly one solution, and you may not use the same element twice.</p>
             <br>
-            <p>You can return the answer in any order.</p>
+            <p>You can return the answer directly in the return Statement.</p>
         </div>
 
 
@@ -37,19 +37,20 @@
             <div class="example">
                 <h4>Example 1:</h4>
 
-                <p><strong>Input:</strong> nums = [2,7,11,15], target = 9</p>
-                <p><strong>Output:</strong> [0,1]</p>
-                <p><strong>Explanation:</strong> Because nums[0] + nums[1] == 9, we return [0, 1].</p>
+                <p><strong>Input:</strong> x=10 , y=12 </p>
+                <p><strong>Output:</strong> 22</p>
+                <p><strong>Explanation:</strong> Because x+y == 10+12==22, we return 22.</p>
             </div>
             <br>
         </div>
 
         <div id="constraints">
+            <h4>Constraints:</h4>
             <ul>
                 <li>2 <= nums.length <= 104</li>
-                <li>-109 <= nums[i] <= 109</li>
-                <li>-109 <= target <= 109</li>
-                <li><b>Only one valid answer exists.</b></li>
+                <li>-109 <= x <= 109</li>
+                <li>-109 <= x <= 109</li>
+                <!-- <li><b>Only one valid answer exists.</b></li> -->
             </ul>
         </div>
 
@@ -60,14 +61,28 @@
 
     <div id="code-box">
         <div class="form">
-            <form action="/runCode" method="post">
+            <form action="/problems/runCode" method="post">
+                <div id="header">
+                    <div id="select_language">
+                      <p>Language: </p>
+                      <select name="language" id="language">
+                        <option value="java" selected>JAVA</option>
+                        <option value="py">PYTHON</option>
+                        <option value="c++">C++</option>
+                      </select>
+                    </div>
+        
+                    <div id="other_option">
+                      <input type="button" value="Reset" id="reset_code">
+                    </div>
+                  </div>
                 <textarea name="code" id="editor" cols="10" rows="30" ></textarea>
     
-        <select name="language" id="language">
+        <!-- <select name="language" id="language">
             <option value="java" selected>JAVA</option>
             <option value="py">PYTHON</option>
             <option value="c++">C++</option>
-        </select>
+        </select> -->
     
     
                 <input type="submit" value="Submit">
